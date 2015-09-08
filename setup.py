@@ -7,9 +7,9 @@ from version import get_version
 version = get_version()
 
 setup(
-    name='edem.group.list.email.text',
+    name='edem.group.list.email.html',
     version=version,
-    description="E-Democracy customization of plain text messages in a "
+    description="E-Democracy customization of html messages in a "
                 "group",
     long_description=open("README.txt").read() + "\n" +
     open(os.path.join("docs", "HISTORY.txt")).read(),
@@ -28,7 +28,7 @@ setup(
     keywords='',
     author='Bill Bushey',
     author_email='bill.bushey@e-democracy.org',
-    url='https://github.com/e-democracy/edem.group.list.email.text',
+    url='https://github.com/e-democracy/edem.group.list.email.html',
     license='GPL 3',
     packages=find_packages(exclude=['ez_setup']),
     namespace_packages=['edem', 'edem.group', 'edem.group.list',
@@ -41,7 +41,7 @@ setup(
         'zope.tales',
         'zope.viewlet',
         'edem.skin',
-        'gs.group.list.email.text'
+        'gs.group.list.email.html'
     ],
     entry_points="""
     # -*- Entry points: -*-
