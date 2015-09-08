@@ -3,6 +3,15 @@
            xmlns:browser="http://namespaces.zope.org/browser"
            i18n_domain="edem.group.list.email.html">
 
-  <include package="zope.viewlet" file="meta.zcml" />
+  <class class=".message.EDemHTMLMessagePart">
+    <implements
+      interface="gs.group.list.email.base.interfaces.IMessagePart" />
+  </class>
+  <adapter
+    name="html"
+    for="gs.group.list.email.base.interfaces.IPost
+         edem.skin.interfaces.IEDemLayer"
+    provides="gs.group.list.email.base.interfaces.IMessagePart"
+    factory=".message.EDemHTMLMessagePart" />
 
 </configure>
